@@ -2,10 +2,6 @@
 
 Fetches and parses ARC69 metadata for Algorand NFTs.
 
-Want to _add_ metadata to existing NFTs? https://github.com/algokittens/arc69/blob/master/pre-existing-NFTs.md
-
-Want to learn more about the ARC69 spec? https://github.com/algokittens/arc69
-
 ### Usage
 
 ```js
@@ -40,3 +36,9 @@ arc69.fetch(assetId).then((metadata) => {
     }
 });
 ```
+
+## Resources
+
+Want to _add_ metadata to existing NFTs? https://github.com/algokittens/arc69/blob/master/pre-existing-NFTs.md
+
+Want to learn more about the ARC69 spec? https://github.com/algokittens/arc69
