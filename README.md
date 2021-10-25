@@ -2,11 +2,9 @@
 
 Fetches and parses ARC69 metadata for Algorand NFTs.
 
-Want to add ARC69 metadata to your NFTs? Check out this handy guide:
-https://github.com/algokittens/arc69/blob/master/pre-existing-NFTs.md
+Want to add metadata to your NFTs? https://github.com/algokittens/arc69/blob/master/pre-existing-NFTs.md
 
-Want to learn more about ARC69? Check out the spec here:
-https://github.com/algokittens/arc69
+Want to learn more about the ARC69 spec? https://github.com/algokittens/arc69
 
 ### Usage
 
