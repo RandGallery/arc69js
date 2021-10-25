@@ -14,7 +14,7 @@ const arc69 = new Arc69();
 arc69.fetch(assetId).then((metadata) => {
     // Check metadata is available.
     if (!metadata) {
-        console.log('No Arc69 metadata found 🥱');
+        console.log('No ARC69 metadata found 🥱');
         return;
     }
 
