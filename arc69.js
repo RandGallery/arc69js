@@ -23,7 +23,9 @@ export class Arc69 {
         for (const transaction of transactions) {
             try {
                 const noteBase64 = transaction.note;
-                const noteString = atob(noteBase64).trim();
+                const noteString = atob(noteBase64)
+                    .trim()
+                    .replace(/[^ -~]+/g, "");
                 const noteObject = JSON.parse(noteString);
                 if (noteObject.standard === "arc69") {
                     return noteObject;
