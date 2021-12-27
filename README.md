@@ -27,6 +27,16 @@ arc69.fetch(assetId).then((metadata) => {
     if (metadata.external_url) {
         console.log('External URL:', metadata.external_url);
     }
+    
+    // Normalize properties.
+    if (metadata.properties) {
+      metadata.attributes = Object.entries(metadata.properties).map(
+        ([trait_type, value]) => ({
+          trait_type,
+          value,
+        })
+      );
+    }
 
     // Check for attributes.
     if (metadata.attributes) {
