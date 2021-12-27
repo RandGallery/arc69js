@@ -30,12 +30,12 @@ arc69.fetch(assetId).then((metadata) => {
     
     // Normalize properties.
     if (metadata.properties) {
-      metadata.attributes = Object.entries(metadata.properties).map(
-        ([trait_type, value]) => ({
-          trait_type,
-          value,
-        })
-      );
+        metadata.attributes = Object.entries(metadata.properties).map(
+            ([trait_type, value]) => ({
+                trait_type,
+                value,
+            })
+        );
     }
 
     // Check for attributes.
