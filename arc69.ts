@@ -19,11 +19,11 @@ interface AlgoExplorerTransaction {
 
 /** Fetches and parses ARC69 metadata for Algorand NFTs. */
 export class Arc69 {
-    algoExplorerApiBaseUrl = "https://algoexplorerapi.io";
+    algoExplorerApiBaseUrl = "https://algoindexer.algoexplorerapi.io/v2";
 
     async fetch(assetId: number | string): Promise<Arc69Metadata | null> {
         // Fetch `acfg` transactions.
-        const url = `${this.algoExplorerApiBaseUrl}/idx2/v2/transactions?asset-id=${assetId}&tx-type=acfg`;
+        const url = `${this.algoExplorerApiBaseUrl}/assets/${assetId}/transactions?tx-type=acfg`;
         let transactions: AlgoExplorerTransaction[];
         try {
             transactions = (await fetch(url).then((res) => res.json())).transactions;
