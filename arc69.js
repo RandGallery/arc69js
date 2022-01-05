@@ -1,12 +1,12 @@
 /** Fetches and parses ARC69 metadata for Algorand NFTs. */
 export class Arc69 {
     constructor() {
-        this.algoExplorerApiBaseUrl = "https://algoexplorerapi.io";
+        this.algoExplorerApiBaseUrl = "https://algoindexer.algoexplorerapi.io";
     }
 
     async fetch(assetId) {
         // Fetch `acfg` transactions.
-        const url = `${this.algoExplorerApiBaseUrl}/idx2/v2/transactions?asset-id=${assetId}&tx-type=acfg`;
+        const url = `${this.algoExplorerApiBaseUrl}/v2/transactions?asset-id=${assetId}&tx-type=acfg`;
         let transactions;
         try {
             transactions = (await fetch(url).then((res) => res.json())).transactions;
